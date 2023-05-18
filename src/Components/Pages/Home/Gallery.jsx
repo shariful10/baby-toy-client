@@ -23,7 +23,7 @@ const Gallery = () => {
 					<div>
 						<img
 							className="h-full w-full rounded-lg border"
-							src="https://i.ibb.co/86NDFDM/car4.jpg"
+							src="https://i.ibb.co/kSWrmTY/car8.jpg"
 							alt=""
 						/>
 					</div>
@@ -62,7 +62,7 @@ const Gallery = () => {
 					<div>
 						<img
 							className="h-full w-full rounded-lg border"
-							src="https://i.ibb.co/kSWrmTY/car8.jpg"
+							src="https://i.ibb.co/Xj0p4pf/car14.jpg"
 							alt=""
 						/>
 					</div>
