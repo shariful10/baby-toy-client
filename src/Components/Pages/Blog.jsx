@@ -32,7 +32,17 @@ const Blog = () => {
 				href="#"
 				class="block w-full p-6 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
 				<h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
-					Noteworthy technology acquisitions 2021
+                    Compare SQL and NoSQL databases?
+				</h5>
+				<p class="font-normal text-gray-700 dark:text-gray-400">
+                    SQL databases are suited for structured data with complex relationships and require strong consistency and transactional support. NoSQL databases are suitable for handling unstructured or semi-structured data, offering scalability and flexibility at the expense of strict consistency guarantees. The choice between SQL and NoSQL depends on the specific requirements of the application and the nature of the data being stored and accessed.
+				</p>
+			</div>
+			<div
+				href="#"
+				class="block w-full p-6 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
+				<h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+                    What is express js? What is Nest JS?
 				</h5>
 				<p class="font-normal text-gray-700 dark:text-gray-400">
 					Here are the biggest enterprise technology acquisitions of 2021 so far, in
@@ -43,18 +53,7 @@ const Blog = () => {
 				href="#"
 				class="block w-full p-6 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
 				<h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
-					Noteworthy technology acquisitions 2021
-				</h5>
-				<p class="font-normal text-gray-700 dark:text-gray-400">
-					Here are the biggest enterprise technology acquisitions of 2021 so far, in
-					reverse chronological order.
-				</p>
-			</div>
-			<div
-				href="#"
-				class="block w-full p-6 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
-				<h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
-					Noteworthy technology acquisitions 2021
+                    What is MongoDB aggregate and how does it work?
 				</h5>
 				<p class="font-normal text-gray-700 dark:text-gray-400">
 					Here are the biggest enterprise technology acquisitions of 2021 so far, in
