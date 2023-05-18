@@ -45,8 +45,10 @@ const Blog = () => {
                     What is express js? What is Nest JS?
 				</h5>
 				<p class="font-normal text-gray-700 dark:text-gray-400">
-					Here are the biggest enterprise technology acquisitions of 2021 so far, in
-					reverse chronological order.
+                    Express.js: Express.js is a lightweight and flexible web application framework for Node.js. It simplifies the development of web servers by providing a minimalistic approach and a robust middleware ecosystem.
+				</p>
+				<p class="font-normal text-gray-700 dark:text-gray-400">
+                    NestJS: NestJS is a TypeScript-based framework for building scalable and maintainable server-side applications. It follows the MVC pattern and provides a structured and modular approach to development, leveraging the power of TypeScript.
 				</p>
 			</div>
 			<div
