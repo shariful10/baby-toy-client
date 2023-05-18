@@ -58,8 +58,7 @@ const Blog = () => {
                     What is MongoDB aggregate and how does it work?
 				</h5>
 				<p class="font-normal text-gray-700 dark:text-gray-400">
-					Here are the biggest enterprise technology acquisitions of 2021 so far, in
-					reverse chronological order.
+                    MongoDB's aggregate is a feature that allows you to perform advanced data aggregation operations on collections. It uses a pipeline of stages to transform and analyze data. Each stage applies a specific operation, and the output of one stage serves as the input for the next stage. The aggregate framework enables powerful querying, grouping, sorting, and calculation capabilities within MongoDB.
 				</p>
 			</div>
 		</div>
