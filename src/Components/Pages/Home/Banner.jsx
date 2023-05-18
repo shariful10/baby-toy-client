@@ -7,10 +7,10 @@ const Banner = () => {
 			<div id="slide1" className="carousel-item relative w-full">
 				<img src="https://i.ibb.co/1LpR9V9/banner1.png" className="w-full" />
 				<div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
-					<a href="#slide2" className="p-3 bg-[#FE6C6B] hover:bg-[#60B9B0] rounded-full">
+                <a href="#slide2" className="p-3 bg-[#60B9B0] hover:bg-[#FE6C6B] rounded-full">
 						<FaArrowLeft className="text-white" />
 					</a>
-					<a href="#slide2" className="p-3 bg-[#FE6C6B] hover:bg-[#60B9B0] rounded-full">
+					<a href="#slide2" className="p-3 bg-[#60B9B0] hover:bg-[#FE6C6B] rounded-full">
 						<FaArrowRight className="text-white" />
 					</a>
 				</div>
@@ -23,10 +23,10 @@ const Banner = () => {
 			<div id="slide2" className="carousel-item relative w-full rounded-lg">
 				<img src="https://i.ibb.co/92V641q/banner2.png" className="w-full" />
 				<div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
-					<a href="#slide1" className="p-3 bg-[#FE6C6B] hover:bg-[#60B9B0] rounded-full">
+					<a href="#slide1" className="p-3 bg-[#60B9B0] hover:bg-[#FE6C6B] rounded-full">
 						<FaArrowLeft className="text-white" />
 					</a>
-					<a href="#slide1" className="p-3 bg-[#FE6C6B] hover:bg-[#60B9B0] rounded-full">
+					<a href="#slide1" className="p-3 bg-[#60B9B0] hover:bg-[#FE6C6B] rounded-full">
 						<FaArrowRight className="text-white" />
 					</a>
 				</div>
