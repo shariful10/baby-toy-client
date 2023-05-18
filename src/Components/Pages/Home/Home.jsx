@@ -1,6 +1,7 @@
 import React from "react";
 import Banner from "./Banner";
 import useTitle from "../../../Hooks/useTitle";
+import Gallery from "./Gallery";
 
 const Home = () => {
 	useTitle("Home");
@@ -8,6 +9,7 @@ const Home = () => {
 	return (
 		<div>
 			<Banner />
+            <Gallery />
 		</div>
 	);
 };

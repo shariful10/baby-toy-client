@@ -5,7 +5,7 @@ const Blog = () => {
 	useTitle("Blog");
 
 	return (
-		<div className="grid md:grid-cols-2 gap-6">
+		<div className="grid md:grid-cols-2 gap-6 my-[50px] md:my-[130px]">
 			<div
 				href="#"
 				class="block w-full p-6 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
@@ -16,7 +16,7 @@ const Blog = () => {
 					Access Token: An access token is a short-lived credential that proves a user or application's authentication and authorization to access 
                     protected resources on an API or server.
 				</p>
-				<p class="font-normal text-gray-700 dark:text-gray-400">
+				<p class="font-normal text-gray-700 dark:text-gray-400 my-3">
 					Refresh Token: A refresh token is a long-lived credential used to obtain a
 					newaccess token without requiring the user to reauthenticate, enhancing security by minimizing the exposure of the access token.
 				</p>
