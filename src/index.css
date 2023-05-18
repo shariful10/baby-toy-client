@@ -1,3 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.btn-bnr {
+  @apply py-3 px-5 bg-[#FE6C6B] hover:bg-[#60B9B0]  mt-8 rounded-lg font-semibold duration-200
+}
