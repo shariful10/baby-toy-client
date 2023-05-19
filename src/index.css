@@ -5,3 +5,7 @@
 .btn-bnr {
   @apply py-3 px-5 bg-[#60B9B0] hover:bg-[#FE6C6B]  mt-8 rounded-lg font-semibold duration-200
 }
+
+.btn-submit {
+  @apply text-white py-3 w-full bg-[#60B9B0] hover:bg-[#FE6C6B] rounded-lg font-semibold duration-200
+}
