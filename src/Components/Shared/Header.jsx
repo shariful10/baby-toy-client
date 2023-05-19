@@ -1,11 +1,17 @@
 import React, { useContext, useState } from "react";
 import { Link, NavLink } from "react-router-dom";
-import { HiMenu, HiOutlineX } from "react-icons/hi";
+import { HiMenu, HiOutlineX, HiUserCircle } from "react-icons/hi";
 import { AuthContext } from "../../Provider/AuthProvider";
 
 const Header = () => {
 	const [isOpen, setIsOpen] = useState(false);
-	const { user } = useContext(AuthContext);
+	const { user, logOut } = useContext(AuthContext);
+
+	const handleLogOut = () => {
+		logOut()
+			.then(() => {})
+			.catch((err) => console.log(err));
+	};
 
 	return (
 		<div className="bg-[#60B9B0]">
@@ -40,7 +46,9 @@ const Header = () => {
 						</NavLink>
 					</li>
 					{user ? (
-						<li className='text-white hover:text-[#f98888] font-medium'>
+						<li
+							onClick={handleLogOut}
+							className="text-white hover:text-[#f98888] font-medium">
 							Log Out
 						</li>
 					) : (
@@ -53,18 +61,21 @@ const Header = () => {
 						</li>
 					)}
 				</ul>
-				<img
-					title={user?.displayName}
-					src={user?.photoURL}
-					className="h-10 w-10 rounded-[50%]"
-					alt=""
-				/>
+				{user && (
+					<img
+						title={user?.displayName}
+						src={user?.photoURL}
+						className="h-10 w-10 rounded-[50%]"
+						alt=""
+					/>
+				)}
 				{/* Mobile Navbar Section  */}
 				<div className="lg:hidden">
 					{/* Dropdown Open Button */}
 					<button
 						aria-label="Open Menu"
 						title="Open Menu"
+						className="text-white"
 						onClick={() => setIsOpen(true)}>
 						<HiMenu className="w-5 text-White" />
 					</button>
@@ -90,8 +101,9 @@ const Header = () => {
 										<button
 											aria-label="Close Menu"
 											title="Close Menu"
+											className="text-white"
 											onClick={() => setIsOpen(false)}>
-											<HiOutlineX className="w-5 text-gray-600" />
+											<HiOutlineX className="w-5 text-white" />
 										</button>
 									</div>
 								</div>
@@ -117,8 +129,7 @@ const Header = () => {
 											</NavLink>
 										</li>
 										{user ? (
-											<li
-												className='text-white hover:text-[#f98888] font-medium'>
+											<li className="text-white hover:text-[#f98888] font-medium">
 												Log Out
 											</li>
 										) : (

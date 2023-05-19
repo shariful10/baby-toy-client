@@ -1,10 +1,10 @@
-import React, { createContext } from "react";
+import React, { useContext } from "react";
 import useTitle from "../../../Hooks/useTitle";
 import { Link } from "react-router-dom";
-import { AuthContext } from './../../../Provider/AuthProvider';
+import { AuthContext } from "../../../Provider/AuthProvider";
 
 const Login = () => {
-	const { signIn } = createContext(AuthContext);
+	const { signIn, googleSignIn } = useContext(AuthContext);
 	useTitle("Login");
 
 	const handleLogin = (e) => {
@@ -12,18 +12,31 @@ const Login = () => {
 		const form = e.target;
 		const email = form.email.value;
 		const password = form.password.value;
-		console.log(email, password);
+
 		signIn(email, password)
+			.then((res) => {
+				const user = res.user;
+				console.log(user);
+				form.reset();
+				alert("Login successful");
+				// navigate(from, { replace: true });
+			})
+			.catch((err) => {
+				console.log(err);
+				alert("Login Failed");
+				form.reset();
+			});
+	};
+
+	const handleGoogleLogin = () => {
+		googleSignIn()
 			.then((res) => {
 				const loggedUser = res.user;
 				console.log(loggedUser);
-				alert("Successfully Login");
+				alert("Login successful");
 				// navigate(from, { replace: true });
 			})
-			.catch((error) => {
-				console.log(error);
-				alert("Something Went Wrong");
-			});
+			.catch((err) => console.log(err));
 	};
 
 	return (
@@ -70,14 +83,13 @@ const Login = () => {
 								required
 							/>
 						</div>
-						<button type="submit" className="btn-submit">
-							Login
-						</button>
+						<input className="btn-submit" type="submit" value="Login" />
 					</form>
 					<h3 className="text-center my-5 text-[18px] font-medium">Or Sign In With</h3>
 					<div className="text-center">
 						<button
 							type="button"
+							onClick={handleGoogleLogin}
 							className="text-white bg-[#60B9B0] hover:bg-[#FE6C6B] focus:ring-4 focus:outline-none font-medium rounded-lg text-[18px] px-5 py-3 text-center inline-flex items-center">
 							<svg
 								className="w-4 h-4 mr-2 -ml-1"
