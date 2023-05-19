@@ -1,20 +1,22 @@
-import React from "react";
+import React, { createContext } from "react";
 import useTitle from "../../../Hooks/useTitle";
 import { Link } from "react-router-dom";
+import { AuthContext } from "../../../Provider/AuthProvider";
 
 const Login = () => {
+	const { signIn } = createContext(AuthContext)
 	useTitle("Login");
 
 	return (
-		<div>
+		<div className="mt-[30px] md:mt-[50px]">
 			<div
 				style={{ backgroundImage: "url(https://i.ibb.co/XYcTBt4/bg.jpg)" }}
-				className="py-[140px] rounded-lg">
+				className="py-[80px] md:py-[100px] rounded-lg">
 				<h1 className="text-center text-5xl md:text-7xl font-bold text-white">Login</h1>
 			</div>
 			<div className="mx-5 md:mx-0 md:flex justify-between items-center my-[50px] md:my-[130px]">
 				<img className="md:w-[45%]" src="https://i.ibb.co/h1gNy8C/login1.png" alt="" />
-				<div className="md:w-[45%] border border-[#60B9B0] p-[50px] rounded-lg mt-5 md:mt-0">
+				<div className="md:w-[45%] border border-[#60B9B0] p-5 md:p-[50px] rounded-lg mt-5 md:mt-0">
 					<h2 className="text-3xl md:text-5xl text-center font-semibold text-[#60B9B0] mb-5">
 						Login
 					</h2>

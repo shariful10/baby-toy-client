@@ -9,3 +9,11 @@
 .btn-submit {
   @apply text-white py-3 w-full bg-[#60B9B0] hover:bg-[#FE6C6B] rounded-lg font-semibold duration-200
 }
+
+.active {
+	@apply font-medium tracking-wide text-[#FE6C6B] transition-colors duration-200 hover:text-[#f98888];
+}
+
+.default {
+	@apply font-medium tracking-wide text-white transition-colors duration-200 hover:text-[#f98888];
+}

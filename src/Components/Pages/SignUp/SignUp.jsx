@@ -1,24 +1,36 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Link } from "react-router-dom";
 import useTitle from "../../../Hooks/useTitle";
+import { AuthContext } from "../../../Provider/AuthProvider";
 
 const SignUp = () => {
-    useTitle('Sign Up');
+	const { createUser } = useContext(AuthContext);
+	useTitle("Sign Up");
+
+	const handleSignUp = (e) => {
+		e.preventDefault();
+		const form = e.target;
+		const name = form.name.value;
+		const email = form.email.value;
+		const url = form.url.value;
+		const password = form.password.value;
+		console.log(name, email, url, password);
+	};
 
 	return (
-		<div>
+		<div className="mt-[30px] md:mt-[50px]">
 			<div
 				style={{ backgroundImage: "url(https://i.ibb.co/XYcTBt4/bg.jpg)" }}
-				className="py-[140px] rounded-lg">
+				className="py-[80px] md:py-[100px] rounded-lg">
 				<h1 className="text-center text-5xl md:text-7xl font-bold text-white">Sign Up</h1>
 			</div>
 			<div className="mx-5 md:mx-0 md:flex justify-between items-center my-[50px] md:my-[130px]">
 				<img className="md:w-[45%]" src="https://i.ibb.co/h1gNy8C/login1.png" alt="" />
-				<div className="md:w-[45%] border border-[#60B9B0] p-[50px] rounded-lg mt-5 md:mt-0">
+				<div className="md:w-[45%] border border-[#60B9B0] p-5 md:p-[50px] rounded-lg mt-5 md:mt-0">
 					<h2 className="text-3xl md:text-5xl text-center font-semibold text-[#60B9B0] mb-5">
 						Sign Up
 					</h2>
-					<form>
+					<form onSubmit={handleSignUp}>
 						<div className="mb-6">
 							<label
 								htmlFor="email"
@@ -28,7 +40,7 @@ const SignUp = () => {
 							<input
 								type="text"
 								id="name"
-                                name="name"
+								name="name"
 								className="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-sm-light"
 								placeholder="Your Name"
 								required
@@ -43,7 +55,7 @@ const SignUp = () => {
 							<input
 								type="email"
 								id="email"
-                                name="email"
+								name="email"
 								className="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-sm-light"
 								placeholder="Your Email"
 								required
@@ -58,7 +70,7 @@ const SignUp = () => {
 							<input
 								type="url"
 								id="url"
-                                name="url"
+								name="url"
 								className="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-sm-light"
 								placeholder="Photo URL"
 								required
@@ -73,6 +85,7 @@ const SignUp = () => {
 							<input
 								type="password"
 								id="password"
+								name="password"
 								placeholder="Your Password"
 								className="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-sm-light"
 								required
@@ -86,9 +99,9 @@ const SignUp = () => {
 					<div className="text-center">
 						<button
 							type="button"
-							class="text-white bg-[#60B9B0] hover:bg-[#FE6C6B] focus:ring-4 focus:outline-none font-medium rounded-lg text-[18px] px-5 py-3 text-center inline-flex items-center">
+							className="text-white bg-[#60B9B0] hover:bg-[#FE6C6B] focus:ring-4 focus:outline-none font-medium rounded-lg text-[18px] px-5 py-3 text-center inline-flex items-center">
 							<svg
-								class="w-4 h-4 mr-2 -ml-1"
+								className="w-4 h-4 mr-2 -ml-1"
 								aria-hidden="true"
 								focusable="false"
 								data-prefix="fab"
