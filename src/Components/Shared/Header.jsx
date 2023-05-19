@@ -1,9 +1,11 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import { Link, NavLink } from "react-router-dom";
 import { HiMenu, HiOutlineX } from "react-icons/hi";
+import { AuthContext } from "../../Provider/AuthProvider";
 
 const Header = () => {
-	const [isMenuOpen, setIsMenuOpen] = useState(false);
+	const [isOpen, setIsOpen] = useState(false);
+	const { user } = useContext(AuthContext);
 
 	return (
 		<div className="bg-[#60B9B0]">
@@ -29,13 +31,7 @@ const Header = () => {
 							Home
 						</NavLink>
 					</li>
-					<li>
-						<NavLink
-							to="/login"
-							className={({ isActive }) => (isActive ? "active" : "default")}>
-							Login
-						</NavLink>
-					</li>
+
 					<li>
 						<NavLink
 							to="/signup"
@@ -43,17 +39,36 @@ const Header = () => {
 							Sign Up
 						</NavLink>
 					</li>
+					{user ? (
+						<li className='text-white hover:text-[#f98888] font-medium'>
+							Log Out
+						</li>
+					) : (
+						<li>
+							<NavLink
+								to="/login"
+								className={({ isActive }) => (isActive ? "active" : "default")}>
+								Login
+							</NavLink>
+						</li>
+					)}
 				</ul>
+				<img
+					title={user?.displayName}
+					src={user?.photoURL}
+					className="h-10 w-10 rounded-[50%]"
+					alt=""
+				/>
 				{/* Mobile Navbar Section  */}
 				<div className="lg:hidden">
 					{/* Dropdown Open Button */}
 					<button
 						aria-label="Open Menu"
 						title="Open Menu"
-						onClick={() => setIsMenuOpen(true)}>
-						<HiMenu className="w-5 text-gray-600" />
+						onClick={() => setIsOpen(true)}>
+						<HiMenu className="w-5 text-White" />
 					</button>
-					{isMenuOpen && (
+					{isOpen && (
 						<div className="absolute top-0 left-0 w-full z-10">
 							<div className="p-5 bg-[#60B9B0] border rounded shadow-sm">
 								{/* Logo & Button section */}
@@ -75,7 +90,7 @@ const Header = () => {
 										<button
 											aria-label="Close Menu"
 											title="Close Menu"
-											onClick={() => setIsMenuOpen(false)}>
+											onClick={() => setIsOpen(false)}>
 											<HiOutlineX className="w-5 text-gray-600" />
 										</button>
 									</div>
@@ -101,15 +116,22 @@ const Header = () => {
 												Sign Up
 											</NavLink>
 										</li>
-										<li>
-											<NavLink
-												to="/login"
-												className={({ isActive }) =>
-													isActive ? "active" : "default"
-												}>
-												Login
-											</NavLink>
-										</li>
+										{user ? (
+											<li
+												className='text-white hover:text-[#f98888] font-medium'>
+												Log Out
+											</li>
+										) : (
+											<li>
+												<NavLink
+													to="/login"
+													className={({ isActive }) =>
+														isActive ? "active" : "default"
+													}>
+													Login
+												</NavLink>
+											</li>
+										)}
 									</ul>
 								</nav>
 							</div>

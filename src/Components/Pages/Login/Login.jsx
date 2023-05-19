@@ -1,11 +1,30 @@
 import React, { createContext } from "react";
 import useTitle from "../../../Hooks/useTitle";
 import { Link } from "react-router-dom";
-import { AuthContext } from "../../../Provider/AuthProvider";
+import { AuthContext } from './../../../Provider/AuthProvider';
 
 const Login = () => {
-	const { signIn } = createContext(AuthContext)
+	const { signIn } = createContext(AuthContext);
 	useTitle("Login");
+
+	const handleLogin = (e) => {
+		e.preventDefault();
+		const form = e.target;
+		const email = form.email.value;
+		const password = form.password.value;
+		console.log(email, password);
+		signIn(email, password)
+			.then((res) => {
+				const loggedUser = res.user;
+				console.log(loggedUser);
+				alert("Successfully Login");
+				// navigate(from, { replace: true });
+			})
+			.catch((error) => {
+				console.log(error);
+				alert("Something Went Wrong");
+			});
+	};
 
 	return (
 		<div className="mt-[30px] md:mt-[50px]">
@@ -20,7 +39,7 @@ const Login = () => {
 					<h2 className="text-3xl md:text-5xl text-center font-semibold text-[#60B9B0] mb-5">
 						Login
 					</h2>
-					<form>
+					<form onSubmit={handleLogin}>
 						<div className="mb-6">
 							<label
 								htmlFor="email"
@@ -30,6 +49,7 @@ const Login = () => {
 							<input
 								type="email"
 								id="email"
+								name="email"
 								className="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-sm-light"
 								placeholder="Your Email"
 								required
@@ -44,6 +64,7 @@ const Login = () => {
 							<input
 								type="password"
 								id="password"
+								name="password"
 								placeholder="Your Password"
 								className="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-sm-light"
 								required
@@ -57,9 +78,9 @@ const Login = () => {
 					<div className="text-center">
 						<button
 							type="button"
-							class="text-white bg-[#60B9B0] hover:bg-[#FE6C6B] focus:ring-4 focus:outline-none font-medium rounded-lg text-[18px] px-5 py-3 text-center inline-flex items-center">
+							className="text-white bg-[#60B9B0] hover:bg-[#FE6C6B] focus:ring-4 focus:outline-none font-medium rounded-lg text-[18px] px-5 py-3 text-center inline-flex items-center">
 							<svg
-								class="w-4 h-4 mr-2 -ml-1"
+								className="w-4 h-4 mr-2 -ml-1"
 								aria-hidden="true"
 								focusable="false"
 								data-prefix="fab"

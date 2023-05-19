@@ -4,7 +4,7 @@ import useTitle from "../../../Hooks/useTitle";
 import { AuthContext } from "../../../Provider/AuthProvider";
 
 const SignUp = () => {
-	const { createUser } = useContext(AuthContext);
+	const { createUser, updateUserData } = useContext(AuthContext);
 	useTitle("Sign Up");
 
 	const handleSignUp = (e) => {
@@ -15,6 +15,24 @@ const SignUp = () => {
 		const url = form.url.value;
 		const password = form.password.value;
 		console.log(name, email, url, password);
+		if (password.length < 6) {
+			alert("Password Must Be Minimum 6 Characters");
+			return;
+		}
+		createUser(email, password)
+			.then((res) => {
+				const createdUser = res.user;
+				console.log(createdUser);
+				alert("Successfully Created");
+				updateUserData(createdUser, name, url)
+					.then(() => {
+						console.log("Successfully updated user data");
+					})
+					.catch((error) => {
+						console.log("Error updating user data:", error);
+					});
+			})
+			.catch((err) => console.log(err));
 	};
 
 	return (
