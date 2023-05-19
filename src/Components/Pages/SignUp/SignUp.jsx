@@ -1,24 +1,39 @@
 import React from "react";
-import useTitle from "../Hooks/useTitle";
 import { Link } from "react-router-dom";
+import useTitle from "../../../Hooks/useTitle";
 
-const Login = () => {
-	useTitle("Login");
+const SignUp = () => {
+    useTitle('Sign Up');
 
 	return (
 		<div>
 			<div
 				style={{ backgroundImage: "url(https://i.ibb.co/XYcTBt4/bg.jpg)" }}
 				className="py-[140px] rounded-lg">
-				<h1 className="text-center text-5xl md:text-7xl font-bold text-white">Login</h1>
+				<h1 className="text-center text-5xl md:text-7xl font-bold text-white">Sign Up</h1>
 			</div>
 			<div className="mx-5 md:mx-0 md:flex justify-between items-center my-[50px] md:my-[130px]">
 				<img className="md:w-[45%]" src="https://i.ibb.co/h1gNy8C/login1.png" alt="" />
 				<div className="md:w-[45%] border border-[#60B9B0] p-[50px] rounded-lg mt-5 md:mt-0">
 					<h2 className="text-3xl md:text-5xl text-center font-semibold text-[#60B9B0] mb-5">
-						Login
+						Sign Up
 					</h2>
 					<form>
+						<div className="mb-6">
+							<label
+								htmlFor="email"
+								className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">
+								Your Name
+							</label>
+							<input
+								type="text"
+								id="name"
+                                name="name"
+								className="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-sm-light"
+								placeholder="Your Name"
+								required
+							/>
+						</div>
 						<div className="mb-6">
 							<label
 								htmlFor="email"
@@ -28,8 +43,24 @@ const Login = () => {
 							<input
 								type="email"
 								id="email"
+                                name="email"
 								className="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-sm-light"
 								placeholder="Your Email"
+								required
+							/>
+						</div>
+						<div className="mb-6">
+							<label
+								htmlFor="email"
+								className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">
+								Photo URL
+							</label>
+							<input
+								type="url"
+								id="url"
+                                name="url"
+								className="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-sm-light"
+								placeholder="Photo URL"
 								required
 							/>
 						</div>
@@ -48,7 +79,7 @@ const Login = () => {
 							/>
 						</div>
 						<button type="submit" className="btn-submit">
-							Login
+							Sign Up
 						</button>
 					</form>
 					<h3 className="text-center my-5 text-[18px] font-medium">Or Sign In With</h3>
@@ -73,10 +104,10 @@ const Login = () => {
 						</button>
 					</div>
 					<p className="text-center mt-5">
-						Don't Have An Account?{" "}
-						<Link to="">
+						Already Have An Account?{" "}
+						<Link to="/login">
 							<span className="text-[#60B9B0] hover:text-[#FE6C6B] font-semibold">
-								Sign Up
+								Login
 							</span>
 						</Link>
 					</p>
@@ -86,4 +117,4 @@ const Login = () => {
 	);
 };
 
-export default Login;
+export default SignUp;
