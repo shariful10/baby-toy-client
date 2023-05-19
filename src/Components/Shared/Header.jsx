@@ -48,7 +48,7 @@ const Header = () => {
 					{user ? (
 						<li
 							onClick={handleLogOut}
-							className="text-white hover:text-[#f98888] font-medium">
+							className="text-white hover:text-[#f98888] font-medium cursor-pointer">
 							Log Out
 						</li>
 					) : (

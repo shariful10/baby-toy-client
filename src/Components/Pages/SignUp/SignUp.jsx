@@ -4,7 +4,7 @@ import useTitle from "../../../Hooks/useTitle";
 import { AuthContext } from "../../../Provider/AuthProvider";
 
 const SignUp = () => {
-	const { createUser, updateUserData } = useContext(AuthContext);
+	const { createUser, updateUserData, googleSignIn } = useContext(AuthContext);
 	useTitle("Sign Up");
 
 	const handleSignUp = (e) => {
@@ -31,6 +31,17 @@ const SignUp = () => {
 					.catch((error) => {
 						console.log("Error updating user data:", error);
 					});
+			})
+			.catch((err) => console.log(err));
+	};
+
+	const handleGoogleLogin = () => {
+		googleSignIn()
+			.then((res) => {
+				const loggedUser = res.user;
+				console.log(loggedUser);
+				alert("Login successful");
+				// navigate(from, { replace: true });
 			})
 			.catch((err) => console.log(err));
 	};
@@ -117,6 +128,7 @@ const SignUp = () => {
 					<div className="text-center">
 						<button
 							type="button"
+							onClick={handleGoogleLogin}
 							className="text-white bg-[#60B9B0] hover:bg-[#FE6C6B] focus:ring-4 focus:outline-none font-medium rounded-lg text-[18px] px-5 py-3 text-center inline-flex items-center">
 							<svg
 								className="w-4 h-4 mr-2 -ml-1"
