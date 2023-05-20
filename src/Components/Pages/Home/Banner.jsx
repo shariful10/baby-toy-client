@@ -5,7 +5,7 @@ const Banner = () => {
 	return (
 		<div className="carousel w-full mt-[30px] md:mt-[50px]">
 			<div id="slide1" className="carousel-item relative w-full">
-				<img src="https://i.ibb.co/1LpR9V9/banner1.png" className="w-full" />
+				<img src="https://i.ibb.co/1LpR9V9/banner1.png" className="w-full rounded-t-xl" />
 				<div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
                 <a href="#slide2" className="p-3 bg-[#60B9B0] hover:bg-[#FE6C6B] rounded-full">
 						<FaArrowLeft className="text-white" />

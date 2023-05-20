@@ -5,7 +5,7 @@ const Blog = () => {
 	useTitle("Blog");
 
 	return (
-		<div>
+		<div className="mt-[30px] md:mt-[50px]">
 			<div
 				style={{ backgroundImage: "url(https://i.ibb.co/XYcTBt4/bg.jpg)" }}
 				className="py-[140px] rounded-lg">

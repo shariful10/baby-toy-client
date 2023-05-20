@@ -1,6 +1,6 @@
 import React, { useContext, useState } from "react";
 import { Link, NavLink } from "react-router-dom";
-import { HiMenu, HiOutlineX, HiUserCircle } from "react-icons/hi";
+import { HiMenu, HiOutlineX } from "react-icons/hi";
 import { AuthContext } from "../../Provider/AuthProvider";
 
 const Header = () => {
@@ -50,6 +50,13 @@ const Header = () => {
 					to="/signup"
 					className={({ isActive }) => (isActive ? "active" : "default")}>
 					Sign Up
+				</NavLink>
+			</li>
+			<li>
+				<NavLink
+					to="/blog"
+					className={({ isActive }) => (isActive ? "active" : "default")}>
+					Blog
 				</NavLink>
 			</li>
 		</>

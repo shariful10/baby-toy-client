@@ -9,7 +9,7 @@ import SignUp from "../Components/Pages/SignUp/SignUp";
 import ErrorPage from "../Components/Pages/ErrorPage/ErrorPage";
 import AllToy from "../Components/Pages/AllToy/AllToy";
 import AddAToy from "../Components/Pages/AddAToy/AddAToy";
-import MyToy from './../Components/Pages/MyToy/MyToy';
+import MyToy from "./../Components/Pages/MyToy/MyToy";
 
 const router = createBrowserRouter([
 	{
@@ -36,6 +36,7 @@ const router = createBrowserRouter([
 			{
 				path: "/alltoy",
 				element: <AllToy />,
+				loader: () => fetch("toys.json"),
 			},
 			{
 				path: "/addtoy",
