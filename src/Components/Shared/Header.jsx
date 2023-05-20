@@ -13,13 +13,55 @@ const Header = () => {
 			.catch((err) => console.log(err));
 	};
 
+	const navItems = (
+		<>
+			<li>
+				<NavLink to="/" className={({ isActive }) => (isActive ? "active" : "default")}>
+					Home
+				</NavLink>
+			</li>
+			<li>
+				<NavLink
+					to="/alltoy"
+					className={({ isActive }) => (isActive ? "active" : "default")}>
+					All Toys
+				</NavLink>
+			</li>
+			{user && (
+				<li>
+					<NavLink
+						to="/addtoy"
+						className={({ isActive }) => (isActive ? "active" : "default")}>
+						Add a Toy
+					</NavLink>
+				</li>
+			)}
+			{user && (
+				<li>
+					<NavLink
+						to="/mytoy"
+						className={({ isActive }) => (isActive ? "active" : "default")}>
+						My Toy
+					</NavLink>
+				</li>
+			)}
+			<li>
+				<NavLink
+					to="/signup"
+					className={({ isActive }) => (isActive ? "active" : "default")}>
+					Sign Up
+				</NavLink>
+			</li>
+		</>
+	);
+
 	return (
 		<div className="bg-[#60B9B0]">
 			<div className="relative flex items-center justify-between px-4 py-5 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8">
 				{/* Logo Section */}
 				<Link to="/" className="inline-flex items-center">
 					<img
-						className="h-8 w-8 border-4 border-white rounded-[50%]"
+						className="h-12 w-12 border-4 border-white rounded-[50%]"
 						src="https://i.ibb.co/qxm6rfq/favicon.png"
 						alt=""
 					/>
@@ -29,46 +71,28 @@ const Header = () => {
 				</Link>
 
 				{/* Nav Items Section */}
-				<ul className="items-center hidden space-x-8 lg:flex">
-					<li>
-						<NavLink
-							to="/"
-							className={({ isActive }) => (isActive ? "active" : "default")}>
-							Home
-						</NavLink>
-					</li>
-
-					<li>
-						<NavLink
-							to="/signup"
-							className={({ isActive }) => (isActive ? "active" : "default")}>
-							Sign Up
-						</NavLink>
-					</li>
+				<ul className="items-center hidden space-x-8 lg:flex">{navItems}</ul>
+				<div className="flex justify-center items-center gap-2">
 					{user ? (
-						<li
-							onClick={handleLogOut}
-							className="text-white hover:text-[#f98888] font-medium cursor-pointer">
-							Log Out
-						</li>
+						<>
+							<button
+								onClick={handleLogOut}
+								className="btn-hdr cursor-pointer hidden lg:block">
+								Log Out
+							</button>
+							<img
+								title={user?.displayName}
+								src={user?.photoURL}
+								className="h-10 w-10 rounded-[50%]"
+								alt=""
+							/>
+						</>
 					) : (
-						<li>
-							<NavLink
-								to="/login"
-								className={({ isActive }) => (isActive ? "active" : "default")}>
-								Login
-							</NavLink>
-						</li>
+						<Link to="/login">
+							<button className="btn-hdr">Login</button>
+						</Link>
 					)}
-				</ul>
-				{user && (
-					<img
-						title={user?.displayName}
-						src={user?.photoURL}
-						className="h-10 w-10 rounded-[50%]"
-						alt=""
-					/>
-				)}
+				</div>
 				{/* Mobile Navbar Section  */}
 				<div className="lg:hidden">
 					{/* Dropdown Open Button */}
@@ -77,7 +101,7 @@ const Header = () => {
 						title="Open Menu"
 						className="text-white"
 						onClick={() => setIsOpen(true)}>
-						<HiMenu className="w-5 text-White" />
+						<HiMenu className="w-6 h-6 text-[#FE6C6B]" />
 					</button>
 					{isOpen && (
 						<div className="absolute top-0 left-0 w-full z-10">
@@ -87,11 +111,11 @@ const Header = () => {
 									<div>
 										<Link to="/" className="inline-flex items-center">
 											<img
-												className="h-8 w-8 border-4 border-white rounded-[50%]"
+												className="h-12 w-12 border-4 border-white rounded-[50%]"
 												src="https://i.ibb.co/qxm6rfq/favicon.png"
 												alt=""
 											/>
-											<span className="ml-2 text-xl font-bold tracking-wide text-gray-800">
+											<span className="ml-2 text-xl font-bold tracking-wide text-[#FE6C6B]">
 												BabyToy
 											</span>
 										</Link>
@@ -103,45 +127,24 @@ const Header = () => {
 											title="Close Menu"
 											className="text-white"
 											onClick={() => setIsOpen(false)}>
-											<HiOutlineX className="w-5 text-white" />
+											<HiOutlineX className="w-6 h-6 text-[#FE6C6B]" />
 										</button>
 									</div>
 								</div>
 								{/* Mobile Nav Items Section */}
 								<nav>
 									<ul className="space-y-4">
-										<li>
-											<NavLink
-												to="/"
-												className={({ isActive }) =>
-													isActive ? "active" : "default"
-												}>
-												Home
-											</NavLink>
-										</li>
-										<li>
-											<NavLink
-												to="/signup"
-												className={({ isActive }) =>
-													isActive ? "active" : "default"
-												}>
-												Sign Up
-											</NavLink>
-										</li>
+										{navItems}
 										{user ? (
-											<li className="text-white hover:text-[#f98888] font-medium">
+											<button
+												onClick={handleLogOut}
+												className="btn-hdr cursor-pointer">
 												Log Out
-											</li>
+											</button>
 										) : (
-											<li>
-												<NavLink
-													to="/login"
-													className={({ isActive }) =>
-														isActive ? "active" : "default"
-													}>
-													Login
-												</NavLink>
-											</li>
+											<Link to="/login">
+												<button className="btn-hdr mt-3">Login</button>
+											</Link>
 										)}
 									</ul>
 								</nav>

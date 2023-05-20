@@ -2,7 +2,7 @@ import React from "react";
 
 const Gallery = () => {
 	return (
-		<div className="my-[50px] md:my-[130px]">
+		<div className="my-[50px] md:my-[130px] mx-5 md:mx-0">
 			<h2 className="text-5xl text-center font-bold mb-[50px]">Toy Gallery</h2>
 			<div className="grid grid-cols-2 md:grid-cols-4 gap-4">
 				<div className="grid gap-4">

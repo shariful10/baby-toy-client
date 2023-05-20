@@ -2,6 +2,8 @@ import React, { useContext } from "react";
 import { Link } from "react-router-dom";
 import useTitle from "../../../Hooks/useTitle";
 import { AuthContext } from "../../../Provider/AuthProvider";
+import { toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const SignUp = () => {
 	const { createUser, updateUserData, googleSignIn } = useContext(AuthContext);
@@ -16,14 +18,32 @@ const SignUp = () => {
 		const password = form.password.value;
 		console.log(name, email, url, password);
 		if (password.length < 6) {
-			alert("Password Must Be Minimum 6 Characters");
+			toast.error("Password Must Be Minimum 6 Characters", {
+				position: "top-center",
+				autoClose: 5000,
+				hideProgressBar: false,
+				closeOnClick: true,
+				pauseOnHover: true,
+				draggable: true,
+				progress: undefined,
+				theme: "light",
+			});
 			return;
 		}
 		createUser(email, password)
 			.then((res) => {
 				const createdUser = res.user;
 				console.log(createdUser);
-				alert("Successfully Created");
+				toast.success("Successfully Created", {
+					position: "top-center",
+					autoClose: 5000,
+					hideProgressBar: false,
+					closeOnClick: true,
+					pauseOnHover: true,
+					draggable: true,
+					progress: undefined,
+					theme: "light",
+				});
 				updateUserData(createdUser, name, url)
 					.then(() => {
 						console.log("Successfully updated user data");
@@ -32,7 +52,19 @@ const SignUp = () => {
 						console.log("Error updating user data:", error);
 					});
 			})
-			.catch((err) => console.log(err));
+			.catch((err) => {
+				console.log(err);
+				toast.error("Something went wrong", {
+					position: "top-center",
+					autoClose: 5000,
+					hideProgressBar: false,
+					closeOnClick: true,
+					pauseOnHover: true,
+					draggable: true,
+					progress: undefined,
+					theme: "light",
+				});
+			});
 	};
 
 	const handleGoogleLogin = () => {
@@ -43,7 +75,19 @@ const SignUp = () => {
 				alert("Login successful");
 				// navigate(from, { replace: true });
 			})
-			.catch((err) => console.log(err));
+			.catch((err) => {
+				console.log(err);
+				toast.error("Something went wrong", {
+					position: "top-center",
+					autoClose: 5000,
+					hideProgressBar: false,
+					closeOnClick: true,
+					pauseOnHover: true,
+					draggable: true,
+					progress: undefined,
+					theme: "light",
+				});
+			});
 	};
 
 	return (

@@ -2,6 +2,8 @@ import React, { useContext } from "react";
 import useTitle from "../../../Hooks/useTitle";
 import { Link } from "react-router-dom";
 import { AuthContext } from "../../../Provider/AuthProvider";
+import { toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const Login = () => {
 	const { signIn, googleSignIn } = useContext(AuthContext);
@@ -18,12 +20,31 @@ const Login = () => {
 				const user = res.user;
 				console.log(user);
 				form.reset();
-				alert("Login successful");
+				toast.success("Successfully Login", {
+					position: "top-center",
+					autoClose: 5000,
+					hideProgressBar: false,
+					closeOnClick: true,
+					pauseOnHover: true,
+					draggable: true,
+					progress: undefined,
+					theme: "light",
+				});
+
 				// navigate(from, { replace: true });
 			})
 			.catch((err) => {
 				console.log(err);
-				alert("Login Failed");
+				toast.error("Login Failed", {
+					position: "top-center",
+					autoClose: 5000,
+					hideProgressBar: false,
+					closeOnClick: true,
+					pauseOnHover: true,
+					draggable: true,
+					progress: undefined,
+					theme: "light",
+				});
 				form.reset();
 			});
 	};
@@ -33,10 +54,31 @@ const Login = () => {
 			.then((res) => {
 				const loggedUser = res.user;
 				console.log(loggedUser);
-				alert("Login successful");
+				toast.success("Login successful", {
+					position: "top-center",
+					autoClose: 5000,
+					hideProgressBar: false,
+					closeOnClick: true,
+					pauseOnHover: true,
+					draggable: true,
+					progress: undefined,
+					theme: "light",
+				});
 				// navigate(from, { replace: true });
 			})
-			.catch((err) => console.log(err));
+			.catch((err) => {
+				console.log(err);
+				toast.error("Something went wrong", {
+					position: "top-center",
+					autoClose: 5000,
+					hideProgressBar: false,
+					closeOnClick: true,
+					pauseOnHover: true,
+					draggable: true,
+					progress: undefined,
+					theme: "light",
+				});
+			});
 	};
 
 	return (
