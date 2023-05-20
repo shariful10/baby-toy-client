@@ -1,162 +1,162 @@
 [
-    {
-        "img": "https://i.ibb.co/cLsrbrp/toy-uk.jpg",
-        "name": "UK police forces",
-        "price": "$18",
-        "reting": "4.2",
-        "category": "police",
-        "quantity": "120 Pcs."
-    },
-    {
-        "img": "https://i.ibb.co/J3bR36f/car5.jpg",
-        "name": "Highway Police",
-        "price": "$28",
-        "reting": "4.1",
-        "category": "police",
-        "quantity": "140 Pcs."
-    },
-    {
-        "img": "https://i.ibb.co/YB0cYw6/car3.jpg",
-        "name": "Grand Theft Auto",
-        "price": "$32",
-        "reting": "4.3",
-        "category": "police",
-        "quantity": "180 Pcs."
-    },
-    {
-        "img": "https://i.ibb.co/9vvXvk4/car12.jpg",
-        "name": "Green Dragon",
-        "price": "$19",
-        "reting": "3.8",
-        "category": "cartoon",
-        "quantity": "135 Pcs."
-    },
-    {
-        "img": "https://i.ibb.co/82Pkr4z/car11.jpg",
-        "name": "Red Royal",
-        "price": "$25",
-        "reting": "4.8",
-        "category": "cartoon",
-        "quantity": "200 Pcs."
-    },
-    {
-        "img": "https://i.ibb.co/kGp7X22/car7.jpg",
-        "name": "Blue Jeep",
-        "price": "$14",
-        "reting": "4.5",
-        "category": "cartoon",
-        "quantity": "190 Pcs."
-    },
-    {
-        "img": "https://i.ibb.co/Fnd4jQ4/car1.jpg",
-        "name": "Red Tiger",
-        "price": "$12",
-        "reting": "3.9",
-        "category": "cartoon",
-        "quantity": "150 Pcs."
-    },
-    {
-        "img": "https://i.ibb.co/9cTv0jJ/car2.jpg",
-        "name": "Racing Hunter",
-        "price": "$22",
-        "reting": "4.9",
-        "category": "sports",
-        "quantity": "132 Pcs."
-    },
-    {
-        "img": "https://i.ibb.co/86NDFDM/car4.jpg",
-        "name": "Yellow Tiger",
-        "price": "$42",
-        "rating": "4.1",
-        "category": "sports",
-        "quantity": "175 Pcs."
-    },
-    {
-        "img": "https://i.ibb.co/h2LmdYj/lambo.jpg",
-        "name": "Lambo Sian",
-        "price": "$51",
-        "reting": "4.3",
-        "category": "sports",
-        "quantity": "110 Pcs."
-    },
-    {
-        "img": "https://i.ibb.co/PtwfY18/red.jpg",
-        "name": "Red Zing",
-        "price": "$48",
-        "reting": "4.4",
-        "category": "sports",
-        "quantity": "195 Pcs."
-    },
-    {
-        "img": "https://i.ibb.co/hsSbWnp/pp.jpg",
-        "name": "Vapid Police Cruiser",
-        "price": "$38",
-        "reting": "4.1",
-        "category": "police",
-        "quantity": "125 Pcs."
-    },
-    {
-        "img": "https://i.ibb.co/YB0cYw6/car3.jpg",
-        "name": "Crime Brance Racer",
-        "price": "$42",
-        "reting": "5",
-        "category": "police",
-        "quantity": "160 Pcs."
-    },
-    {
-        "img": "https://i.ibb.co/2WSQ6P5/uk.jpg",
-        "name": "Police UK",
-        "price": "$31",
-        "reting": "4.9",
-        "category": "police",
-        "quantity": "155 Pcs."
-    },
-    {
-        "img": "https://i.ibb.co/9vvXvk4/car12.jpg",
-        "name": "Green Bolt",
-        "price": "$27",
-        "reting": "4.5",
-        "category": "cartoon",
-        "quantity": "180 Pcs."
-    },
-    {
-        "img": "https://i.ibb.co/kSWrmTY/car8.jpg",
-        "name": "Green Jeep",
-        "price": "$15",
-        "reting": "4.7",
-        "category": "cartoon",
-        "quantity": "120 Pcs."
-    },
-    {
-        "img": "https://i.ibb.co/Fnd4jQ4/car1.jpg",
-        "name": "Red Horse",
-        "price": "$20",
-        "reting": "4.6",
-        "category": "cartoon",
-        "quantity": "160 Pcs."
-    },
-    {
-        "img": "https://i.ibb.co/h2LmdYj/lambo.jpg",
-        "name": "Blue Prince",
-        "price": "$32",
-        "reting": "4.8",
-        "category": "sports",
-        "quantity": "128 Pcs."
-    },
-    {
-        "img": "https://i.ibb.co/kGp7X22/car7.jpg",
-        "name": "Sky Lion",
-        "price": "$52",
-        "reting": "4.2",
-        "category": "cartoon",
-        "quantity": "198 Pcs."
-    },
-    {
-        "img": "https://i.ibb.co/9cTv0jJ/car2.jpg",
-        "name": "Yellow King",
-        "price": "$14",
-        "reting": "4.9",
-        "category": "sports",
-        "quantity": "200 Pcs."
-    }
+	{
+		"img": "https://i.ibb.co/cLsrbrp/toy-uk.jpg",
+		"name": "UK police forces",
+		"price": "$18",
+		"rating": 4.2,
+		"category": "police",
+		"quantity": "120 Pcs."
+	},
+	{
+		"img": "https://i.ibb.co/J3bR36f/car5.jpg",
+		"name": "Highway Police",
+		"price": "$28",
+		"rating": 4.1,
+		"category": "police",
+		"quantity": "140 Pcs."
+	},
+	{
+		"img": "https://i.ibb.co/YB0cYw6/car3.jpg",
+		"name": "Grand Theft Auto",
+		"price": "$32",
+		"rating": 4.3,
+		"category": "police",
+		"quantity": "180 Pcs."
+	},
+	{
+		"img": "https://i.ibb.co/9vvXvk4/car12.jpg",
+		"name": "Green Dragon",
+		"price": "$19",
+		"rating": 3.8,
+		"category": "cartoon",
+		"quantity": "135 Pcs."
+	},
+	{
+		"img": "https://i.ibb.co/82Pkr4z/car11.jpg",
+		"name": "Red Royal",
+		"price": "$25",
+		"rating": 4.8,
+		"category": "cartoon",
+		"quantity": "200 Pcs."
+	},
+	{
+		"img": "https://i.ibb.co/kGp7X22/car7.jpg",
+		"name": "Blue Jeep",
+		"price": "$14",
+		"rating": 4.5,
+		"category": "cartoon",
+		"quantity": "190 Pcs."
+	},
+	{
+		"img": "https://i.ibb.co/Fnd4jQ4/car1.jpg",
+		"name": "Red Tiger",
+		"price": "$12",
+		"rating": 3.9,
+		"category": "cartoon",
+		"quantity": "150 Pcs."
+	},
+	{
+		"img": "https://i.ibb.co/9cTv0jJ/car2.jpg",
+		"name": "Racing Hunter",
+		"price": "$22",
+		"rating": 4.5,
+		"category": "sports",
+		"quantity": "132 Pcs."
+	},
+	{
+		"img": "https://i.ibb.co/86NDFDM/car4.jpg",
+		"name": "Yellow Tiger",
+		"price": "$42",
+		"rating": 4.5,
+		"category": "sports",
+		"quantity": "175 Pcs."
+	},
+	{
+		"img": "https://i.ibb.co/h2LmdYj/lambo.jpg",
+		"name": "Lambo Sian",
+		"price": "$51",
+		"rating": 5,
+		"category": "sports",
+		"quantity": "110 Pcs."
+	},
+	{
+		"img": "https://i.ibb.co/PtwfY18/red.jpg",
+		"name": "Red Zing",
+		"price": "$48",
+		"rating": 5,
+		"category": "sports",
+		"quantity": "195 Pcs."
+	},
+	{
+		"img": "https://i.ibb.co/hsSbWnp/pp.jpg",
+		"name": "Vapid Police Cruiser",
+		"price": "$38",
+		"rating": 4.1,
+		"category": "police",
+		"quantity": "125 Pcs."
+	},
+	{
+		"img": "https://i.ibb.co/YB0cYw6/car3.jpg",
+		"name": "Crime Brance Racer",
+		"price": "$42",
+		"rating": 5,
+		"category": "police",
+		"quantity": "160 Pcs."
+	},
+	{
+		"img": "https://i.ibb.co/2WSQ6P5/uk.jpg",
+		"name": "Police UK",
+		"price": "$31",
+		"rating": 4.9,
+		"category": "police",
+		"quantity": "155 Pcs."
+	},
+	{
+		"img": "https://i.ibb.co/9vvXvk4/car12.jpg",
+		"name": "Green Bolt",
+		"price": "$27",
+		"rating": 4.5,
+		"category": "cartoon",
+		"quantity": "180 Pcs."
+	},
+	{
+		"img": "https://i.ibb.co/kSWrmTY/car8.jpg",
+		"name": "Green Jeep",
+		"price": "$15",
+		"rating": 4.7,
+		"category": "cartoon",
+		"quantity": "120 Pcs."
+	},
+	{
+		"img": "https://i.ibb.co/Fnd4jQ4/car1.jpg",
+		"name": "Red Horse",
+		"price": "$20",
+		"rating": 4.6,
+		"category": "cartoon",
+		"quantity": "160 Pcs."
+	},
+	{
+		"img": "https://i.ibb.co/h2LmdYj/lambo.jpg",
+		"name": "Blue Prince",
+		"price": "$32",
+		"rating": 4.8,
+		"category": "sports",
+		"quantity": "128 Pcs."
+	},
+	{
+		"img": "https://i.ibb.co/kGp7X22/car7.jpg",
+		"name": "Sky Lion",
+		"price": "$52",
+		"rating": 4.2,
+		"category": "cartoon",
+		"quantity": "198 Pcs."
+	},
+	{
+		"img": "https://i.ibb.co/9cTv0jJ/car2.jpg",
+		"name": "Yellow King",
+		"price": "$14",
+		"rating": 4.9,
+		"category": "sports",
+		"quantity": "200 Pcs."
+	}
 ]

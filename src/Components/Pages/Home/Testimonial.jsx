@@ -1,4 +1,5 @@
 import React from "react";
+import { FaRegStar, FaStar, FaStarHalf } from "react-icons/fa";
 
 const Testimonial = () => {
 	return (
@@ -13,31 +14,11 @@ const Testimonial = () => {
 					/>
 					<h4 className="text-4xl">John Doe</h4>
 					<div className="flex my-3 gap-1">
-						<img
-							className="h-6 w-6"
-							src="https://i.ibb.co/bFVb3cV/star-test.png"
-							alt=""
-						/>
-						<img
-							className="h-6 w-6"
-							src="https://i.ibb.co/bFVb3cV/star-test.png"
-							alt=""
-						/>
-						<img
-							className="h-6 w-6"
-							src="https://i.ibb.co/bFVb3cV/star-test.png"
-							alt=""
-						/>
-						<img
-							className="h-6 w-6"
-							src="https://i.ibb.co/bFVb3cV/star-test.png"
-							alt=""
-						/>
-						<img
-							className="h-6 w-6"
-							src="https://i.ibb.co/bFVb3cV/star-test.png"
-							alt=""
-						/>
+						<FaStar className="text-warning" />
+						<FaStar className="text-warning" />
+						<FaStar className="text-warning" />
+						<FaStar className="text-warning" />
+						<FaStarHalf className="text-warning" />
 					</div>
 					<p>
 						Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aliquid at quaerat
@@ -52,31 +33,11 @@ const Testimonial = () => {
 					/>
 					<h4 className="text-4xl">Ema Watson</h4>
 					<div className="flex my-3 gap-1">
-						<img
-							className="h-6 w-6"
-							src="https://i.ibb.co/bFVb3cV/star-test.png"
-							alt=""
-						/>
-						<img
-							className="h-6 w-6"
-							src="https://i.ibb.co/bFVb3cV/star-test.png"
-							alt=""
-						/>
-						<img
-							className="h-6 w-6"
-							src="https://i.ibb.co/bFVb3cV/star-test.png"
-							alt=""
-						/>
-						<img
-							className="h-6 w-6"
-							src="https://i.ibb.co/bFVb3cV/star-test.png"
-							alt=""
-						/>
-						<img
-							className="h-6 w-6"
-							src="https://i.ibb.co/bFVb3cV/star-test.png"
-							alt=""
-						/>
+						<FaStar className="text-warning" />
+						<FaStar className="text-warning" />
+						<FaStar className="text-warning" />
+						<FaStar className="text-warning" />
+						<FaStar className="text-warning" />
 					</div>
 					<p>
 						Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aliquid at quaerat
@@ -91,31 +52,12 @@ const Testimonial = () => {
 					/>
 					<h4 className="text-4xl">Dwayne Johnson</h4>
 					<div className="flex my-3 gap-1">
-						<img
-							className="h-6 w-6"
-							src="https://i.ibb.co/bFVb3cV/star-test.png"
-							alt=""
-						/>
-						<img
-							className="h-6 w-6"
-							src="https://i.ibb.co/bFVb3cV/star-test.png"
-							alt=""
-						/>
-						<img
-							className="h-6 w-6"
-							src="https://i.ibb.co/bFVb3cV/star-test.png"
-							alt=""
-						/>
-						<img
-							className="h-6 w-6"
-							src="https://i.ibb.co/bFVb3cV/star-test.png"
-							alt=""
-						/>
-						<img
-							className="h-6 w-6"
-							src="https://i.ibb.co/bFVb3cV/star-test.png"
-							alt=""
-						/>
+					<FaStar className="text-warning" />
+						<FaStar className="text-warning" />
+						<FaStar className="text-warning" />
+						<FaStar className="text-warning" />
+						<FaStar className="text-warning" />
+						<FaRegStar className="text-warning" />
 					</div>
 					<p>
 						Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aliquid at quaerat

@@ -1,5 +1,6 @@
 import React from "react";
-import { FaStar } from "react-icons/fa";
+import { FaRegStar, FaStar, FaStarHalf } from "react-icons/fa";
+import Rating from "react-rating";
 
 const TabData = (toy) => {
 	const { img, name, price, rating } = toy.toy;
@@ -13,10 +14,18 @@ const TabData = (toy) => {
 				<h2 className="card-title">Name: {name}</h2>
 				<p className="text-[18px] font-medium">Price: {price}</p>
 				<p className="text-[18px] font-medium">Price: {price}</p>
-				<div className="flex">
-					<p className="text-[18px] font-medium">
-						Ratings: {rating}
-					</p>
+				<div className="flex items-center">
+					<div className="flex-grow">
+						<div className="flex items-center">
+							<Rating
+								placeholderRating={rating}
+								readonly
+								emptySymbol={<FaRegStar />}
+								placeholderSymbol={<FaStar className="text-warning" />}
+								fullSymbol={<FaStar />}></Rating>
+							<span className="ml-2">{rating}</span>
+						</div>
+					</div>
 					<button className="btn-delete">Details</button>
 				</div>
 			</div>
