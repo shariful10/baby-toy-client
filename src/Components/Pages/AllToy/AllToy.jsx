@@ -23,10 +23,10 @@ const AllToy = () => {
 				className="py-[80px] md:py-[100px] rounded-lg">
 				<h1 className="text-center text-5xl md:text-7xl font-bold text-white">All Toys</h1>
 			</div>
-			<div className="my-[50px] md:my-[130px]">
+			<div className="my-[50px] md:my-[130px] mx-5 md:mx-0">
 				<div className="text-center mb-10">
 					<div className="form-control">
-						<div className="input-group justify-end">
+						<div className="input-group md:justify-end">
 							<input
 								type="text"
 								name="text"
