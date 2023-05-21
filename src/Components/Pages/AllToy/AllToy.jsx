@@ -1,16 +1,17 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useLoaderData } from "react-router-dom";
 import Toys from "./Toys";
 import useTitle from "./../../../Hooks/useTitle";
 
 const AllToy = () => {
-	const toys = useLoaderData();
+	const AllToys = useLoaderData();
 	const [searchQuery, setSearchQuery] = useState("");
-	const [filteredToys, setFilteredToys] = useState(toys);
+	const [filteredToys, setFilteredToys] = useState(AllToys);
 	useTitle("All Toys");
+	console.log(AllToys)
 
 	const handleSearch = () => {
-		const filtered = toys.filter((toy) =>
+		const filtered = AllToys.filter((toy) =>
 			toy.name.toLowerCase().includes(searchQuery.toLowerCase())
 		);
 		setFilteredToys(filtered);

@@ -8,11 +8,11 @@ const PrivateRoutes = ({ children }) => {
 
 	if (loading) {
 		return (
-			<div className="flex justify-center items-center">
+			<div className="flex justify-center items-center mt-12">
 				<div role="status">
 					<svg
 						aria-hidden="true"
-						className="inline w-8 h-8 mr-2 text-gray-200 animate-spin dark:text-gray-600 fill-red-600"
+						className="inline w-12 h-12 mr-2 text-[#60B9B0] animate-spin fill-[#FE6C6B]"
 						viewBox="0 0 100 101"
 						fill="none"
 						xmlns="http://www.w3.org/2000/svg">

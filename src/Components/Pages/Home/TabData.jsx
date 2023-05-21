@@ -1,10 +1,29 @@
-import React from "react";
-import { FaRegStar, FaStar, FaStarHalf } from "react-icons/fa";
+import React, { useContext } from "react";
+import { FaRegStar, FaStar } from "react-icons/fa";
 import Rating from "react-rating";
 import { Link } from "react-router-dom";
+import { toast } from 'react-toastify';
+  import 'react-toastify/dist/ReactToastify.css';
+import { AuthContext } from "../../../Provider/AuthProvider";
 
 const TabData = (toy) => {
 	const { _id, img, name, price, rating } = toy.toy;
+	const { user } = useContext(AuthContext);
+
+	const handleDetails = () => {
+		if(!user){
+			toast.warn('You have to login first', {
+				position: "top-center",
+				autoClose: 5000,
+				hideProgressBar: false,
+				closeOnClick: true,
+				pauseOnHover: true,
+				draggable: true,
+				progress: undefined,
+				theme: "light",
+				});
+		}
+	}
 
 	return (
 		<div className="card card-compact w-full bg-[#60B9B0] shadow-xl p-2">
@@ -27,7 +46,7 @@ const TabData = (toy) => {
 						</div>
 					</div>
 					<Link to={`/details/${_id}`}>
-						<button className="btn-delete">View Details</button>
+						<button onClick={handleDetails} className="btn-delete">View Details</button>
 					</Link>
 				</div>
 			</div>

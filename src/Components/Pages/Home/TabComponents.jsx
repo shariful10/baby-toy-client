@@ -1,18 +1,17 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useLoaderData } from "react-router-dom";
 import { Tab, TabList, TabPanel, Tabs } from "react-tabs";
 import TabData from "./TabData";
 
 const TabComponents = () => {
-	const toys = useLoaderData();
-
+	const AllToys = useLoaderData();
 	const [activeTabIndex, setActiveTabIndex] = useState(0);
 
 	const handleTabChange = (index) => {
 		setActiveTabIndex(index);
 	};
 
-	const filteredToys = toys.filter((toy) => {
+	const filteredToys = AllToys.filter((toy) => {
 		if (activeTabIndex === 0) {
 			return toy.category === "sports";
 		} else if (activeTabIndex === 1) {
