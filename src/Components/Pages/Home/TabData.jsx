@@ -12,7 +12,7 @@ const TabData = (toy) => {
 
 	const handleDetails = () => {
 		if(!user){
-			toast.warn('You have to login first', {
+			toast.warn('You have to log in first to view details', {
 				position: "top-center",
 				autoClose: 5000,
 				hideProgressBar: false,

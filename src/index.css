@@ -29,3 +29,7 @@
 .btn-delete{
 	@apply px-5 py-2 bg-[#FE6C6B] rounded-lg text-white font-medium
 }
+
+.btn-form {
+	@apply w-full py-3  bg-[#60B9B0] hover:bg-[#FE6C6B] rounded-lg text-white font-medium
+}
