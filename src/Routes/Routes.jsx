@@ -11,6 +11,7 @@ import AllToy from "../Components/Pages/AllToy/AllToy";
 import AddAToy from "../Components/Pages/AddAToy/AddAToy";
 import MyToy from "./../Components/Pages/MyToy/MyToy";
 import PrivateRoutes from "./PrivateRoutes";
+import ToyDetails from "../Components/Pages/Home/ToyDetails";
 
 const router = createBrowserRouter([
 	{
@@ -21,7 +22,7 @@ const router = createBrowserRouter([
 			{
 				path: "/",
 				element: <Home />,
-				loader: () => fetch("toys.json"),
+				loader: () => fetch("http://localhost:5000/toys"),
 			},
 			{
 				path: "/blog",
@@ -56,6 +57,10 @@ const router = createBrowserRouter([
 					</PrivateRoutes>
 				),
 			},
+			{
+				path: '/details/:id',
+				element: <ToyDetails />
+			}
 		],
 	},
 ]);
