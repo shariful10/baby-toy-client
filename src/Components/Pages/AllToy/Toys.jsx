@@ -3,13 +3,12 @@ import { Link } from "react-router-dom";
 
 const Toys = (toy) => {
 	const { _id, name, category, price, quantity, seller } = toy.toy;
-	console.log(toy.toy);
 
 	return (
 		<>
 			<tr>
-				<td>{seller}</td>
 				<td>{name}</td>
+				<td>{seller}</td>
 				<td>{category}</td>
 				<td>{price}</td>
 				<td>{quantity}</td>

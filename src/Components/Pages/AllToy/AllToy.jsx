@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { useLoaderData } from "react-router-dom";
 import Toys from "./Toys";
 import useTitle from "./../../../Hooks/useTitle";
@@ -8,11 +8,13 @@ const AllToy = () => {
 	const [searchQuery, setSearchQuery] = useState("");
 	const [filteredToys, setFilteredToys] = useState(AllToys);
 	useTitle("All Toys");
-	console.log(AllToys)
+	console.log(AllToys);
 
 	const handleSearch = () => {
-		const filtered = AllToys.filter((toy) =>
-			toy.name.toLowerCase().includes(searchQuery.toLowerCase())
+		const filtered = AllToys.filter(
+			(toy) =>
+				toy.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
+				toy.seller.toLowerCase().includes(searchQuery.toLowerCase())
 		);
 		setFilteredToys(filtered);
 	};
@@ -31,7 +33,7 @@ const AllToy = () => {
 							<input
 								type="text"
 								name="text"
-								placeholder="Search…"
+								placeholder="Search..."
 								className="input input-bordered"
 								value={searchQuery}
 								onChange={(e) => setSearchQuery(e.target.value)}
@@ -59,8 +61,8 @@ const AllToy = () => {
 					{/* head */}
 					<thead>
 						<tr>
-							<th>Seller</th>
 							<th>Name</th>
+							<th>Seller</th>
 							<th>Category</th>
 							<th>Price</th>
 							<th>Quantity</th>
