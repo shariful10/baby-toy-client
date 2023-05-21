@@ -10,6 +10,7 @@ import ErrorPage from "../Components/Pages/ErrorPage/ErrorPage";
 import AllToy from "../Components/Pages/AllToy/AllToy";
 import AddAToy from "../Components/Pages/AddAToy/AddAToy";
 import MyToy from "./../Components/Pages/MyToy/MyToy";
+import PrivateRoutes from "./PrivateRoutes";
 
 const router = createBrowserRouter([
 	{
@@ -41,11 +42,19 @@ const router = createBrowserRouter([
 			},
 			{
 				path: "/addtoy",
-				element: <AddAToy />,
+				element: (
+					<PrivateRoutes>
+						<AddAToy />
+					</PrivateRoutes>
+				),
 			},
 			{
 				path: "/mytoy",
-				element: <MyToy />,
+				element: (
+					<PrivateRoutes>
+						<MyToy />
+					</PrivateRoutes>
+				),
 			},
 		],
 	},

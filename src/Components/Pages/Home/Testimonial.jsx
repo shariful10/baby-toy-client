@@ -20,9 +20,8 @@ const Testimonial = () => {
 						<FaStar className="text-warning" />
 						<FaStarHalf className="text-warning" />
 					</div>
-					<p>
-						Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aliquid at quaerat
-						dolorum labore molestiae vitae nam veritatis error illum ducimus!
+					<p className="text-[16px]">
+						Fantastic toy cars! Inspires imagination, promotes motor skills, and ensures safety. Highly recommended!
 					</p>
 				</div>
 				<div className="bg-[#60B9B0] p-10 shadow-2xl rounded-lg text-white mb-5 md:mb-0">
@@ -39,9 +38,8 @@ const Testimonial = () => {
 						<FaStar className="text-warning" />
 						<FaStar className="text-warning" />
 					</div>
-					<p>
-						Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aliquid at quaerat
-						dolorum labore molestiae vitae nam veritatis error illum ducimus!
+					<p className="text-[16px]">
+						Fantastic toy cars! Inspires imagination, promotes motor skills, and ensures safety. Highly recommended!	
 					</p>
 				</div>
 				<div className="bg-[#60B9B0] p-10 shadow-2xl rounded-lg text-white">
@@ -52,16 +50,15 @@ const Testimonial = () => {
 					/>
 					<h4 className="text-4xl">Dwayne Johnson</h4>
 					<div className="flex my-3 gap-1">
-					<FaStar className="text-warning" />
+						<FaStar className="text-warning" />
 						<FaStar className="text-warning" />
 						<FaStar className="text-warning" />
 						<FaStar className="text-warning" />
 						<FaStar className="text-warning" />
 						<FaRegStar className="text-warning" />
 					</div>
-					<p>
-						Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aliquid at quaerat
-						dolorum labore molestiae vitae nam veritatis error illum ducimus!
+					<p className="text-[16px]">
+						Fantastic toy cars! Inspires imagination, promotes motor skills, and ensures safety. Highly recommended!
 					</p>
 				</div>
 			</div>

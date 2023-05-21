@@ -1,13 +1,16 @@
 import React, { useContext } from "react";
 import useTitle from "../../../Hooks/useTitle";
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../../Provider/AuthProvider";
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
 const Login = () => {
 	const { signIn, googleSignIn } = useContext(AuthContext);
+	const navigate = useNavigate();
+	const location = useLocation();
 	useTitle("Login");
+	const from = location.state?.from?.pathname || "/";
 
 	const handleLogin = (e) => {
 		e.preventDefault();
@@ -30,8 +33,7 @@ const Login = () => {
 					progress: undefined,
 					theme: "light",
 				});
-
-				// navigate(from, { replace: true });
+				navigate(from, { replace: true });
 			})
 			.catch((err) => {
 				console.log(err);

@@ -13,7 +13,6 @@ const TabData = (toy) => {
 			<div className="card-body text-white">
 				<h2 className="card-title">Name: {name}</h2>
 				<p className="text-[18px] font-medium">Price: {price}</p>
-				<p className="text-[18px] font-medium">Price: {price}</p>
 				<div className="flex items-center">
 					<div className="flex-grow">
 						<div className="flex items-center">
@@ -23,10 +22,10 @@ const TabData = (toy) => {
 								emptySymbol={<FaRegStar />}
 								placeholderSymbol={<FaStar className="text-warning" />}
 								fullSymbol={<FaStar />}></Rating>
-							<span className="ml-2">{rating}</span>
+							<span className="ml-2 text-[18px] font-medium">{rating}</span>
 						</div>
 					</div>
-					<button className="btn-delete">Details</button>
+					<button className="btn-delete">View Details</button>
 				</div>
 			</div>
 		</div>

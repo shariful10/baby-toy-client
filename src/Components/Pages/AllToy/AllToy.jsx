@@ -57,7 +57,8 @@ const AllToy = () => {
 				<table className="table w-full">
 					{/* head */}
 					<thead>
-						<tr className="md:text-center">
+						<tr>
+							<th>Seller</th>
 							<th>Name</th>
 							<th>Category</th>
 							<th>Price</th>

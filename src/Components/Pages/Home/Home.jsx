@@ -4,6 +4,7 @@ import useTitle from "../../../Hooks/useTitle";
 import Gallery from "./Gallery";
 import Testimonial from "./Testimonial";
 import TabComponents from "./TabComponents";
+import AboutUs from "./AboutUs";
 
 const Home = () => {
 	useTitle("Home");
@@ -14,6 +15,7 @@ const Home = () => {
             <Gallery />
 			<TabComponents />
 			<Testimonial />
+			<AboutUs />
 		</div>
 	);
 };

@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
 	return (
@@ -6,32 +7,57 @@ const Footer = () => {
 			<div className="mx-auto w-full max-w-screen-xl p-4 py-6 lg:py-8">
 				<div className="grid grid-cols-2 md:grid-cols-4 gap-4">
 					<div>
-						<h2 className="text-xl font-semibold text-[#FE6C6B]">Address</h2>
-						<p className="text-white">
-							Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores,
-							amet.
-						</p>
+						<h2 className="text-xl font-semibold text-[#FE6C6B] mb-3">Address</h2>
+						<p className="text-white">MK Neer, Road- 108, </p>
+						<p className="text-white">Dhanmondi, Dhaka, Bangladesh</p>
 					</div>
 					<div>
-						<h2 className="text-xl font-semibold text-[#FE6C6B]">Address</h2>
-						<p className="text-white">
-							Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores,
-							amet.
-						</p>
+						<h2 className="text-xl font-semibold text-[#FE6C6B] mb-3">Quick Links</h2>
+						<div className="text-white text-[16px]">
+							<Link className="hover:text-[#FE6C6B]" to="/">
+								Home
+							</Link>{" "}
+							<br />
+							<Link className="hover:text-[#FE6C6B]" to="/alltoy">
+								All Toy
+							</Link>{" "}
+							<br />
+							<Link className="hover:text-[#FE6C6B]" to="/addtoy">
+								Add a Toy
+							</Link>{" "}
+							<br />
+							<Link className="hover:text-[#FE6C6B]" to="/mytoy">
+								My Toy
+							</Link>
+						</div>
 					</div>
 					<div>
-						<h2 className="text-xl font-semibold text-[#FE6C6B]">Address</h2>
-						<p className="text-white">
-							Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores,
-							amet.
-						</p>
+						<h2 className="text-xl font-semibold text-[#FE6C6B] mb-3">Support</h2>
+						<div className="text-white text-[16px]">
+							<p className="hover:text-[#FE6C6B]">Support Center</p>
+							<p className="hover:text-[#FE6C6B]">Feedback</p>
+							<p className="hover:text-[#FE6C6B]">Accesbility</p>
+						</div>
 					</div>
 					<div>
-						<h2 className="text-xl font-semibold text-[#FE6C6B]">Address</h2>
-						<p className="text-white">
-							Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores,
-							amet.
-						</p>
+						<h2 className="text-xl font-semibold text-[#FE6C6B] mb-3">Follow Us</h2>
+						<div className="text-white text-[16px]">
+							<Link className="hover:text-[#FE6C6B]" to="/">
+								Facebook
+							</Link>{" "}
+							<br />
+							<Link className="hover:text-[#FE6C6B]" to="/alltoy">
+								Twitter
+							</Link>{" "}
+							<br />
+							<Link className="hover:text-[#FE6C6B]" to="/addtoy">
+								Instagram
+							</Link>{" "}
+							<br />
+							<Link className="hover:text-[#FE6C6B]" to="/mytoy">
+								LinkedIn
+							</Link>
+						</div>
 					</div>
 				</div>
 				<hr className="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8" />
@@ -78,7 +104,9 @@ const Footer = () => {
 							</svg>
 							<span className="sr-only">Twitter page</span>
 						</a>
-						<a href="#" className="text-gray-500 hover:text-gray-900 dark:hover:text-white">
+						<a
+							href="#"
+							className="text-gray-500 hover:text-gray-900 dark:hover:text-white">
 							<svg
 								className="w-5 h-5"
 								fill="#FE6C6B"

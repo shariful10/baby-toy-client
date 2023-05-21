@@ -2,6 +2,7 @@
 	{
 		"img": "https://i.ibb.co/cLsrbrp/toy-uk.jpg",
 		"name": "UK police forces",
+		"seller": "John Smith",
 		"price": "$18",
 		"rating": 4.2,
 		"category": "police",
@@ -10,6 +11,7 @@
 	{
 		"img": "https://i.ibb.co/J3bR36f/car5.jpg",
 		"name": "Highway Police",
+		"seller": "Micle Harris",
 		"price": "$28",
 		"rating": 4.1,
 		"category": "police",
@@ -18,6 +20,7 @@
 	{
 		"img": "https://i.ibb.co/YB0cYw6/car3.jpg",
 		"name": "Grand Theft Auto",
+		"seller": "Max Klink",
 		"price": "$32",
 		"rating": 4.3,
 		"category": "police",
@@ -26,6 +29,7 @@
 	{
 		"img": "https://i.ibb.co/9vvXvk4/car12.jpg",
 		"name": "Green Dragon",
+		"seller": "Kent Smith",
 		"price": "$19",
 		"rating": 3.8,
 		"category": "cartoon",
@@ -34,6 +38,7 @@
 	{
 		"img": "https://i.ibb.co/82Pkr4z/car11.jpg",
 		"name": "Red Royal",
+		"seller": "John Doe",
 		"price": "$25",
 		"rating": 4.8,
 		"category": "cartoon",
@@ -42,6 +47,7 @@
 	{
 		"img": "https://i.ibb.co/kGp7X22/car7.jpg",
 		"name": "Blue Jeep",
+		"seller": "Json Holder",
 		"price": "$14",
 		"rating": 4.5,
 		"category": "cartoon",
@@ -50,6 +56,7 @@
 	{
 		"img": "https://i.ibb.co/Fnd4jQ4/car1.jpg",
 		"name": "Red Tiger",
+		"seller": "David Smith",
 		"price": "$12",
 		"rating": 3.9,
 		"category": "cartoon",
@@ -58,30 +65,34 @@
 	{
 		"img": "https://i.ibb.co/9cTv0jJ/car2.jpg",
 		"name": "Racing Hunter",
+		"seller": "Mark jashon",
 		"price": "$22",
 		"rating": 4.5,
 		"category": "sports",
 		"quantity": "132 Pcs."
 	},
 	{
-		"img": "https://i.ibb.co/86NDFDM/car4.jpg",
-		"name": "Yellow Tiger",
-		"price": "$42",
-		"rating": 4.5,
-		"category": "sports",
-		"quantity": "175 Pcs."
-	},
-	{
 		"img": "https://i.ibb.co/h2LmdYj/lambo.jpg",
 		"name": "Lambo Sian",
+		"seller": "John Smith",
 		"price": "$51",
 		"rating": 5,
 		"category": "sports",
 		"quantity": "110 Pcs."
 	},
 	{
+		"img": "https://i.ibb.co/86NDFDM/car4.jpg",
+		"name": "Yellow Tiger",
+		"seller": "Farade John",
+		"price": "$42",
+		"rating": 4.2,
+		"category": "sports",
+		"quantity": "175 Pcs."
+	},
+	{
 		"img": "https://i.ibb.co/PtwfY18/red.jpg",
 		"name": "Red Zing",
+		"seller": "Alon Mask",
 		"price": "$48",
 		"rating": 5,
 		"category": "sports",
@@ -90,6 +101,7 @@
 	{
 		"img": "https://i.ibb.co/hsSbWnp/pp.jpg",
 		"name": "Vapid Police Cruiser",
+		"seller": "Tony Dev",
 		"price": "$38",
 		"rating": 4.1,
 		"category": "police",
@@ -98,6 +110,7 @@
 	{
 		"img": "https://i.ibb.co/YB0cYw6/car3.jpg",
 		"name": "Crime Brance Racer",
+		"seller": "John Marker",
 		"price": "$42",
 		"rating": 5,
 		"category": "police",
@@ -106,6 +119,7 @@
 	{
 		"img": "https://i.ibb.co/2WSQ6P5/uk.jpg",
 		"name": "Police UK",
+		"seller": "Andrue Symond",
 		"price": "$31",
 		"rating": 4.9,
 		"category": "police",
@@ -114,6 +128,7 @@
 	{
 		"img": "https://i.ibb.co/9vvXvk4/car12.jpg",
 		"name": "Green Bolt",
+		"seller": "Josh Batler",
 		"price": "$27",
 		"rating": 4.5,
 		"category": "cartoon",
@@ -122,6 +137,7 @@
 	{
 		"img": "https://i.ibb.co/kSWrmTY/car8.jpg",
 		"name": "Green Jeep",
+		"seller": "Kent Williamson",
 		"price": "$15",
 		"rating": 4.7,
 		"category": "cartoon",
@@ -130,6 +146,7 @@
 	{
 		"img": "https://i.ibb.co/Fnd4jQ4/car1.jpg",
 		"name": "Red Horse",
+		"seller": "John Hax",
 		"price": "$20",
 		"rating": 4.6,
 		"category": "cartoon",
@@ -138,6 +155,7 @@
 	{
 		"img": "https://i.ibb.co/h2LmdYj/lambo.jpg",
 		"name": "Blue Prince",
+		"seller": "John Bolt",
 		"price": "$32",
 		"rating": 4.8,
 		"category": "sports",
@@ -146,6 +164,7 @@
 	{
 		"img": "https://i.ibb.co/kGp7X22/car7.jpg",
 		"name": "Sky Lion",
+		"seller": "Washington Max",
 		"price": "$52",
 		"rating": 4.2,
 		"category": "cartoon",
@@ -154,6 +173,7 @@
 	{
 		"img": "https://i.ibb.co/9cTv0jJ/car2.jpg",
 		"name": "Yellow King",
+		"seller": "Cris Jordan",
 		"price": "$14",
 		"rating": 4.9,
 		"category": "sports",
