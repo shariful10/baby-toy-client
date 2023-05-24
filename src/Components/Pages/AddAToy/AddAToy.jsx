@@ -19,6 +19,7 @@ const AddAToy = () => {
 		const category = form.category.value;
 		const msg = form.msg.value;
 		const url = form.url.value;
+		const rating = form.rating.value;
 		const addtoy = {
 			name: toy,
 			seller: name,
@@ -27,11 +28,12 @@ const AddAToy = () => {
 			email,
 			price,
 			category,
+			rating,
 			description: msg,
 		};
 		console.log(addtoy);
 
-		fetch("http://localhost:5000/addtoys", {
+		fetch("https://baby-toy-server-phi.vercel.app/addtoys", {
 			method: "POST",
 			headers: {
 				"content-type": "application/json",
@@ -87,7 +89,7 @@ const AddAToy = () => {
 									className="input input-bordered"
 								/>
 							</div>
-							<div className="form-control mt-6">
+							<div className="form-control">
 								<input
 									type="email"
 									name="email"
@@ -96,7 +98,7 @@ const AddAToy = () => {
 									className="input input-bordered"
 								/>
 							</div>
-							<div className="form-control mt-6">
+							<div className="form-control">
 								<input
 									type="number"
 									name="quantity"
@@ -120,18 +122,26 @@ const AddAToy = () => {
 									className="input input-bordered"
 								/>
 							</div>
-						</div>
-						<div className="form-control my-6">
-							<input
-								type="url"
-								name="url"
-								placeholder="Image URL"
-								className="input input-bordered"
-							/>
+							<div className="form-control">
+								<input
+									type="url"
+									name="url"
+									placeholder="Image URL"
+									className="input input-bordered"
+								/>
+							</div>
+							<div className="form-control">
+								<input
+									type="number"
+									name="rating"
+									placeholder="Rating"
+									className="input input-bordered"
+								/>
+							</div>
 						</div>
 						<textarea
 							name="msg"
-							className="textarea textarea-bordered w-full h-[250px]"
+							className="textarea textarea-bordered w-full h-[250px] mt-6 text-[16px]"
 							placeholder="Toy Details"></textarea>
 						<input className="btn-form mt-6" type="submit" value="Add Toy" />
 					</form>

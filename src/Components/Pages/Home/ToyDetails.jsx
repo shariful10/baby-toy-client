@@ -8,7 +8,7 @@ const ToyDetails = () => {
 	useTitle("Toy Details");
 	const toy = useLoaderData();
 	console.log(toy);
-	const { name, seller, rating, quantity, category, img, price } = toy;
+	const { name, seller, rating, quantity, category, img, price, email, desc } = toy;
 
 	return (
 		<div className="mt-[30px] md:mt-[50px]">
@@ -25,11 +25,24 @@ const ToyDetails = () => {
 						<img className="rounded-lg w-full md:h-[450px]" src={img} alt="Movie" />
 					</figure>
 					<div className="card-body text-white">
-						<h3 className="card-title">Toy Name: {name}</h3>
-						<h3 className="card-title">Seller Name: {seller}</h3>
-						<h3 className="card-title">Price: {price}</h3>
-						<h3 className="card-title">Quantity: {quantity}</h3>
-						<h3 className="card-title">Category: {category}</h3>
+						<h3 className="card-title">
+							Toy Name: <span className="font-normal">{name}</span>
+						</h3>
+						<h3 className="card-title">
+							Seller Name: <span className="font-normal">{seller}</span>
+						</h3>
+						<h3 className="card-title">
+							Seller Email: <span className="font-normal">{email}</span>
+						</h3>
+						<h3 className="card-title">
+							Price: <span className="font-normal">{price}</span>
+						</h3>
+						<h3 className="card-title">
+							Quantity: <span className="font-normal">{quantity}</span>
+						</h3>
+						<h3 className="card-title">
+							Category: <span className="font-normal">{category}</span>
+						</h3>
 						<div className="flex items-center">
 							<h3 className="card-title">Ratings:</h3>
 							<div className="flex items-center ml-2">
@@ -43,9 +56,9 @@ const ToyDetails = () => {
 								<span className="ml-2 text-[18px] font-medium">{rating}</span>
 							</div>
 						</div>
-						{/* <div className="card-actions justify-end">
-							<button className="btn btn-primary">Watch</button>
-						</div> */}
+						<h3 className="card-title items-start">
+							Details: <span className="font-normal">{desc}</span>
+						</h3>
 					</div>
 				</div>
 			</div>

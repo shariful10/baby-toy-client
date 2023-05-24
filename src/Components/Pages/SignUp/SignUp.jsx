@@ -1,12 +1,14 @@
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 import { Link } from "react-router-dom";
 import useTitle from "../../../Hooks/useTitle";
 import { AuthContext } from "../../../Provider/AuthProvider";
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import { FaEye, FaEyeSlash } from "react-icons/fa";
 
 const SignUp = () => {
 	const { createUser, updateUserData, googleSignIn } = useContext(AuthContext);
+	const [showPass, setShowPass] = useState(false);
 	useTitle("Sign Up");
 
 	const handleSignUp = (e) => {
@@ -137,26 +139,31 @@ const SignUp = () => {
 						<div className="mb-6">
 							<label
 								htmlFor="email"
-								className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">
+								className="block mb-2 text-sm font-medium text-gray-900">
 								Photo URL
 							</label>
 							<input
 								type="url"
 								id="url"
 								name="url"
-								className="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-sm-light"
+								className="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
 								placeholder="Photo URL"
 								required
 							/>
 						</div>
 						<div className="mb-6">
-							<label
-								htmlFor="password"
-								className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">
-								Your password
-							</label>
+							<div className="flex justify-between items-center">
+								<label
+									htmlFor="password"
+									className="block mb-2 text-sm font-medium text-gray-900">
+									Your password
+								</label>
+								<span onClick={() => setShowPass(!showPass)} className="mr-2">
+									{showPass ? <FaEyeSlash /> : <FaEye />}
+								</span>
+							</div>
 							<input
-								type="password"
+								type={showPass ? "text" : "password"}
 								id="password"
 								name="password"
 								placeholder="Your Password"

@@ -1,15 +1,18 @@
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 import useTitle from "../../../Hooks/useTitle";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../../Provider/AuthProvider";
+import { FaEye, FaEyeSlash } from "react-icons/fa";
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
 const Login = () => {
 	const { signIn, googleSignIn } = useContext(AuthContext);
+	const [showPass, setShowPass] = useState(false);
 	const navigate = useNavigate();
 	const location = useLocation();
 	useTitle("Login");
+
 	const from = location.state?.from?.pathname || "/";
 
 	const handleLogin = (e) => {
@@ -113,13 +116,18 @@ const Login = () => {
 							/>
 						</div>
 						<div className="mb-6">
-							<label
-								htmlFor="password"
-								className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">
-								Your password
-							</label>
+							<div className="flex justify-between items-center">
+								<label
+									htmlFor="password"
+									className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">
+									Your password
+								</label>
+								<span onClick={() => setShowPass(!showPass)} className="mr-2">
+									{showPass ? <FaEyeSlash /> : <FaEye />}
+								</span>
+							</div>
 							<input
-								type="password"
+								type={showPass ? "text" : "password"}
 								id="password"
 								name="password"
 								placeholder="Your Password"

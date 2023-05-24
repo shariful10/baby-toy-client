@@ -6,7 +6,11 @@ const Testimonial = () => {
 		<div className="my-[50px] md:my-[130px] mx-5 md:mx-0">
 			<h2 className="text-5xl text-center font-bold mb-[50px]">Testimonial</h2>
 			<div className="w-full md:flex justify-between gap-6">
-				<div className="bg-[#60B9B0] p-10 shadow-2xl rounded-lg text-white mb-5 md:mb-0">
+				<div
+					data-aos="fade-right"
+					data-aos-easing="ease-out-cubic"
+					data-aos-duration="1000"
+					className="bg-[#60B9B0] p-10 shadow-2xl rounded-lg text-white mb-5 md:mb-0">
 					<img
 						className="h-16 w-16 rounded-[50%] mb-5"
 						src="https://i.ibb.co/M6scNfp/profile1.jpg"
@@ -21,7 +25,8 @@ const Testimonial = () => {
 						<FaStarHalf className="text-warning" />
 					</div>
 					<p className="text-[16px]">
-						Fantastic toy cars! Inspires imagination, promotes motor skills, and ensures safety. Highly recommended!
+						Fantastic toy cars! Inspires imagination, promotes motor skills, and ensures
+						safety. Highly recommended!
 					</p>
 				</div>
 				<div className="bg-[#60B9B0] p-10 shadow-2xl rounded-lg text-white mb-5 md:mb-0">
@@ -39,10 +44,15 @@ const Testimonial = () => {
 						<FaStar className="text-warning" />
 					</div>
 					<p className="text-[16px]">
-						Fantastic toy cars! Inspires imagination, promotes motor skills, and ensures safety. Highly recommended!	
+						Fantastic toy cars! Inspires imagination, promotes motor skills, and ensures
+						safety. Highly recommended!
 					</p>
 				</div>
-				<div className="bg-[#60B9B0] p-10 shadow-2xl rounded-lg text-white">
+				<div
+					data-aos="fade-left"
+					data-aos-easing="ease-out-cubic"
+					data-aos-duration="1000"
+					className="bg-[#60B9B0] p-10 shadow-2xl rounded-lg text-white">
 					<img
 						className="h-16 w-16 rounded-[50%] mb-5"
 						src="https://i.ibb.co/QfSLDMF/profile3.jpg"
@@ -58,7 +68,8 @@ const Testimonial = () => {
 						<FaRegStar className="text-warning" />
 					</div>
 					<p className="text-[16px]">
-						Fantastic toy cars! Inspires imagination, promotes motor skills, and ensures safety. Highly recommended!
+						Fantastic toy cars! Inspires imagination, promotes motor skills, and ensures
+						safety. Highly recommended!
 					</p>
 				</div>
 			</div>

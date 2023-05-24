@@ -6,7 +6,10 @@ const Gallery = () => {
 			<h2 className="text-5xl text-center font-bold mb-[50px]">Toy Gallery</h2>
 			<div className="grid grid-cols-2 md:grid-cols-4 gap-4">
 				<div className="grid gap-4">
-					<div>
+					<div
+						data-aos="zoom-in"
+						data-aos-easing="ease-out-cubic"
+						data-aos-duration="1000">
 						<img
 							className="h-full w-full rounded-lg border"
 							src="https://i.ibb.co/9cTv0jJ/car2.jpg"
@@ -20,7 +23,10 @@ const Gallery = () => {
 							alt=""
 						/>
 					</div>
-					<div>
+					<div
+						data-aos="zoom-in"
+						data-aos-easing="ease-out-cubic"
+						data-aos-duration="1000">
 						<img
 							className="h-full w-full rounded-lg border"
 							src="https://i.ibb.co/kSWrmTY/car8.jpg"
@@ -36,7 +42,10 @@ const Gallery = () => {
 							alt=""
 						/>
 					</div>
-					<div>
+					<div
+						data-aos="zoom-in"
+						data-aos-easing="ease-out-cubic"
+						data-aos-duration="1000">
 						<img
 							className="h-full w-full rounded-lg border"
 							src="https://i.ibb.co/2SZVHbz/car13.jpg"
@@ -52,7 +61,10 @@ const Gallery = () => {
 					</div>
 				</div>
 				<div className="grid gap-4">
-					<div>
+					<div
+						data-aos="zoom-in"
+						data-aos-easing="ease-out-cubic"
+						data-aos-duration="1000">
 						<img
 							className="h-full w-full rounded-lg border"
 							src="https://i.ibb.co/kGp7X22/car7.jpg"
@@ -66,7 +78,10 @@ const Gallery = () => {
 							alt=""
 						/>
 					</div>
-					<div>
+					<div
+						data-aos="zoom-in"
+						data-aos-easing="ease-out-cubic"
+						data-aos-duration="1000">
 						<img
 							className="h-full w-full rounded-lg border"
 							src="https://i.ibb.co/xFLDXSn/car9.jpg"
@@ -82,7 +97,10 @@ const Gallery = () => {
 							alt=""
 						/>
 					</div>
-					<div>
+					<div
+						data-aos="zoom-in"
+						data-aos-easing="ease-out-cubic"
+						data-aos-duration="1000">
 						<img
 							className="h-full w-full rounded-lg border"
 							src="https://i.ibb.co/82Pkr4z/car11.jpg"

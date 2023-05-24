@@ -12,6 +12,7 @@ import AddAToy from "../Components/Pages/AddAToy/AddAToy";
 import MyToy from "./../Components/Pages/MyToy/MyToy";
 import PrivateRoutes from "./PrivateRoutes";
 import ToyDetails from "../Components/Pages/Home/ToyDetails";
+import UpdateToy from "../Components/Pages/MyToy/UpdateToy";
 
 const router = createBrowserRouter([
 	{
@@ -22,7 +23,7 @@ const router = createBrowserRouter([
 			{
 				path: "/",
 				element: <Home />,
-				loader: () => fetch("http://localhost:5000/toys"),
+				loader: () => fetch("https://baby-toy-server-phi.vercel.app/toys"),
 			},
 			{
 				path: "/blog",
@@ -39,7 +40,7 @@ const router = createBrowserRouter([
 			{
 				path: "/alltoy",
 				element: <AllToy />,
-				loader: () => fetch("toys.json"),
+				loader: () => fetch("https://baby-toy-server-phi.vercel.app/toys"),
 			},
 			{
 				path: "/addtoy",
@@ -64,7 +65,18 @@ const router = createBrowserRouter([
 						<ToyDetails />
 					</PrivateRoutes>
 				),
-				loader: ({ params }) => fetch(`http://localhost:5000/toys/${params.id}`),
+				loader: ({ params }) =>
+					fetch(`https://baby-toy-server-phi.vercel.app/toys/${params.id}`),
+			},
+			{
+				path: "/update/:id",
+				element: (
+					<PrivateRoutes>
+						<UpdateToy />
+					</PrivateRoutes>
+				),
+				loader: ({ params }) =>
+					fetch(`https://baby-toy-server-phi.vercel.app/addtoys/${params.id}`),
 			},
 		],
 	},
